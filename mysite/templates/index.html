@@ -1,0 +1,146 @@
+{% extends "layout.html" %}
+    {% set active_item = 'home' %}
+
+{% block body %}
+
+ <section class="home-slider owl-carousel">
+      <div class="slider-item" style="background-image: url('static/img/slider-1.jpg');">
+
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+              <h1 class="mb-5">Join the journey of uniting our family</h1>
+              <p><a href="{{ url_for('registration') }}" class="btn btn-white btn-outline-white">Register</a></p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- END slider -->
+
+    <section class="section element-animate">
+      <div class="container">
+        <div class="row justify-content-center mb-5">
+          <div class="col-md-4"></div>
+          <div class="col-md-8 section-heading">
+            <h2>Our Story</h2>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <img src="static/img/our_story.jpg" alt="Image placeholder" class="img-fluid">
+          </div>
+          <div class="col-md-4">
+            <p>பார்கவ குலமென்பது முக்குலத்தில் ஓர் குலமான கள்ளர்குல பிரிவின்
+              தொன்மையான சோழ நாட்டு அரசவம்சத்தவர்களில் ஓர் குழுவினரின் பட்டமாகும்.
+              ,மலையமான்கள்,சுருதிமான்கள்,ஓய்மான்கள், சேதிராயர்கள் முனையரையர்கள், முனையத்தரையர்கள், மலையராயர்கள், மலையரையர், மலையன் என்ற பட்டங்களையும் பெற்றவர்கள்.</p>
+            <p>சேதிநாடுஎன்றநடுநாடு, மலைநாடு, கோவலூர், திருகோவலூர்,ஓய்மாநாடு, கிழியூர், முனையூர்,
+              மலாடு,திருமுனைப்பாடி, போன்ற சேதிநாட்டு பகுதிகளை இரண்டாயிரம்
+              வருடங்களுக்கும் மேலாக சுருதிமான், மலையமான், நத்தமான்,என்னும்
+              குடிப்பெயருடனும்,சேதிநாட்டை ஆள்பவர்கள் என்பதால் சேதிராயர்கள்
+              என்ற பட்டங்களுடனும் ஆண்ட இனத்தவர்கள் என கல்வெட்டு
+              ஆதாரங்களும்,சங்ககால புறநானூற்றுபாடல்களும் தெரிவிக்கின்றன.</p>
+            <p>Even the all-powerful Pointing has no control about the blind texts it is an almost unorthographic life One day however a small line of blind text by the name of Lorem Ipsum decided to leave for the far World of Grammar.</p>
+          </div>
+          <div class="col-md-4">
+            <p>இக்குழுவினர் தங்களை கல்வெட்டுக்களில் பார்கவ குல சத்ரியர்கள்
+              என்றே பதிவு செய்துள்ளனர். அவர்களின் வம்சத்தினரும் அவ்வாறே
+              அழைக்கப்படுகின்றனர்.இவர்கள் சோழனுக்கு பெண் கொடுக்கும்
+              அளவிற்கு மேன்மையும், தகுதியும் பெற்றவர்களாகஇருந்தனர்.</p>
+            <p>சோழர்களில் ஓர் கிளையான சேதிராயர்
+              என்ற அரசகுல பரம்பரையினர்கள்.சுந்தரசோழனின் மனைவியும்
+              ராஜராஜ சோழனின் தாயாருமான வானவன்மாதேவி என்பவர்
+              திருக்கோவிலூர் மலையமான் சித்தவடவன் என்பவரின் மகளாவார்.
+              சோழ வம்சம் பார்கவ குலத்தோடு நெருங்கிய தொடர்புடையது என
+              வரலாற்றுஆய்வாளர்கள் உறுதிசெய்துள்ளனர்.மேலும் இரண்டாம்
+              ராஜராஜனுடைய மனைவி அவனிமுழுதுடையாள் என்பவரும்
+              மலையமான் மகளேயாவார்கள்.</p>
+            <p><a href="#">Learn More <span class="ion-ios-arrow-right"></span></a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section bg-light">
+      <div class="container">
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class=" heading mb-4">Our Leadership</h2>
+            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+          </div>
+        </div>
+        <div class="row element-animate">
+          <div class="major-caousel js-carousel-1 owl-carousel">
+            <div>
+              <div class="media d-block media-custom text-center">
+                <a href="adoption-single.html"><img src="static/img/ravi.jpeg" alt="Image Placeholder" class="img-fluid"></a>
+                <div class="media-body">
+                  <h3 class="mt-0 text-black">Founder</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media d-block media-custom text-center">
+                <a href="adoption-single.html"><img src="static/img/ravi.jpeg" alt="Image Placeholder" class="img-fluid"></a>
+                <div class="media-body">
+                  <h3 class="mt-0 text-black">Co-Founder</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div class="media d-block media-custom text-center">
+                <a href="adoption-single.html"><img src="static/img/ravi.jpeg" alt="Image Placeholder" class="img-fluid"></a>
+                <div class="media-body">
+                  <h3 class="mt-0 text-black">Organizer</h3>
+                </div>
+              </div>
+            </div>
+            <div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section blog">
+      <div class="container">
+
+        <div class="row justify-content-center mb-5 element-animate">
+          <div class="col-md-8 text-center">
+            <h2 class=" heading mb-4">Recent Events</h2>
+            <p class="mb-5 lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Commodi unde impedit, necessitatibus, soluta sit quam minima expedita atque corrupti reiciendis.</p>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-md-6">
+
+            <div class="media mb-4 d-md-flex d-block element-animate">
+              <a href="#" class="mr-5"><img src="static/img/our_story.jpg" alt="Placeholder image" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="post-meta">May 26th, 2019</span>
+                <h3 class="mt-2 text-black"><a href="#">Quarterly Meet</a></h3>
+                <p>Our quarery meet</p>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+
+
+
+          </div>
+          <div class="col-md-6">
+            <div class="media mb-4 d-md-flex d-block element-animate">
+              <a href="#" class="mr-5"><img src="static/img/our_story.jpg" alt="Placeholder image" class="img-fluid"></a>
+              <div class="media-body">
+                <span class="post-meta">Feb 26th, 2018</span>
+                <h3 class="mt-2 text-black"><a href="#">Mothly Meet</a></h3>
+                <p><a href="#" class="btn btn-primary btn-sm">Read more</a></p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}

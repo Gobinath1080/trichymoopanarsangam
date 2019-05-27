@@ -1,0 +1,77 @@
+{% extends "layout.html" %}
+{% set active_item = 'register' %}
+
+{% block body %}
+
+    <section class="home-slider inner-page owl-carousel">
+      <div class="slider-item" style="background-image: url({{url_for('static',filename='img/slider-1.jpg')}})">
+
+        <div class="container">
+          <div class="row slider-text align-items-center justify-content-center flex-wrap">
+            <div class="col-md-8 text-center col-sm-12 element-animate">
+              <h1>Why Register With Us ?</h1>
+              <p class="mb-5">some message.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-md-8 mb-10 order-2>
+            <form action="{{url_for('registration')}}" method="post" class="form">
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="name">Name</label>
+                  <input type="text" name="name" id="name" class="form-control" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="phone">Phone</label>
+                  <input type="text" name="phone" id="phone" class="form-control ">
+                </div>
+              </div>
+              <div class="row">
+                 <div class="col-md-12 form-group">
+                  <label for="name">Gender</label>
+                  <div class="col">
+                  <input type="radio" name="gender" value="male" class="form-control" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                  <label for="name">Gender</label>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <label for="email">Email</label>
+                  <input type="email" name="email" id="email" class="form-control ">
+                </div>
+                <div class="col-md-6 form-group">
+                  <label for="message">City</label>
+                  <input type="text" name="city" id="city" class="form-control ">
+                </div>
+              </div>
+              <div class="row">
+                <div class="col-md-12 form-group">
+                  <label for="message">Write Message</label>
+                  <textarea name="message" name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
+                </div>
+              </div>
+            <div class="row">
+            <div class="col-md-6 form-group">
+                  <label for="message">File</label>
+                  <input type="file" name="filteToUpload" id="citfilteToUploady" class="form-control ">
+                </div>
+            </div>
+              <div class="row">
+                <div class="col-md-6 form-group">
+                  <input type="submit" value="Register" class="btn btn-primary">
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+{% endblock %}
