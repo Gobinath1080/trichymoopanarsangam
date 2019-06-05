@@ -3,75 +3,199 @@
 
 {% block body %}
 
-    <section class="home-slider inner-page owl-carousel">
-      <div class="slider-item" style="background-image: url({{url_for('static',filename='img/slider-1.jpg')}})">
+<section class="home-slider inner-page owl-carousel">
+  <div class="slider-item" style="background-image: url({{url_for('static',filename='img/slider-1.jpg')}})">
 
-        <div class="container">
-          <div class="row slider-text align-items-center justify-content-center flex-wrap">
-            <div class="col-md-8 text-center col-sm-12 element-animate">
-              <h1>Why Register With Us ?</h1>
-              <p class="mb-5">some message.</p>
-            </div>
-          </div>
+    <div class="container">
+      <div class="row slider-text align-items-center justify-content-center flex-wrap">
+        <div class="col-md-8 text-center col-sm-12 element-animate">
+          <h1>Why Register With Us ?</h1>
+          <p class="mb-5">some message.</p>
         </div>
-
       </div>
-    </section>
+    </div>
 
-    <section class="section">
-      <div class="container">
-        <div class="row align-items-center">
-          <div class="col-md-8 mb-10 order-2>
-            <form action="{{url_for('registration')}}" method="post" class="form">
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="name">Name</label>
-                  <input type="text" name="name" id="name" class="form-control" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="phone">Phone</label>
-                  <input type="text" name="phone" id="phone" class="form-control ">
-                </div>
-              </div>
-              <div class="row">
-                 <div class="col-md-12 form-group">
-                  <label for="name">Gender</label>
-                  <div class="col">
-                  <input type="radio" name="gender" value="male" class="form-control" required="" oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
-                  <label for="name">Gender</label>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <label for="email">Email</label>
-                  <input type="email" name="email" id="email" class="form-control ">
-                </div>
-                <div class="col-md-6 form-group">
-                  <label for="message">City</label>
-                  <input type="text" name="city" id="city" class="form-control ">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-12 form-group">
-                  <label for="message">Write Message</label>
-                  <textarea name="message" name="message" id="message" class="form-control " cols="30" rows="8"></textarea>
-                </div>
-              </div>
-            <div class="row">
+  </div>
+</section>
+
+<section class="section">
+  <div class="container h-100">
+    <div class="row justify-content-center align-items-center h-100">
+      <div class="col-md-8 order-2">
+        <form action=" {{url_for('registration')}}" method="post" class="form">
+          <div class="row">
             <div class="col-md-6 form-group">
-                  <label for="message">File</label>
-                  <input type="file" name="filteToUpload" id="citfilteToUploady" class="form-control ">
-                </div>
+              <label for="name" style="font-size: 1rem">Name</label>
+              <input type="text" name="name" id="name" class="form-control">
+              <p style="color: red">{% if form %}Name is invalid{% endif %}</p>
             </div>
-              <div class="row">
-                <div class="col-md-6 form-group">
-                  <input type="submit" value="Register" class="btn btn-primary">
-                </div>
-              </div>
-            </form>
+            <div class="col-md-6 form-group">
+              <label for="phone">Phone</label>
+              <input type="tel" name="phone" id="phone" class="form-control " required="">
+            </div>
           </div>
-        </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="name">Gender</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="radio" name="gender" value="male" required=""
+                oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+              <label for="name">Male</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <input type="radio" name="gender" value="female" required=""
+                oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+              <label for="name">Female</label>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="father-name">Father Name</label>
+              <input type="email" name="father-name" id="father-name" class="form-control ">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="mother-name">Mother Name</label>
+              <input type="text" name="mother-name" id="mother-name" class="form-control ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="scorpio">Zodiac / Star</label>
+              <input type="text" name="scorpio" id="scorpio" class="form-control ">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="dob">DOB</label>
+              <input id='dob' class="form-control " />
+            </div>
+            <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/jquery-3.2.1.min.js') }}"></script> -->
+            <script>
+              $(function () {
+                $('#dob').datepicker({
+                  uiLibrary: 'bootstrap'
+                });
+              });
+            </script>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="name">Dhosam</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <input type="radio" name="dhosam" value="Yes" required=""
+                  oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                <label for="name">Yes</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12 form-group">
+                <input type="radio" name="dhosam" value="No" required=""
+                  oninvalid="this.setCustomValidity('Please Enter valid email')" oninput="setCustomValidity('')">
+                <label for="name">No</label>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-4 form-group">
+              <label for="education">Education</label>
+              <input type="text" name="education" id="education" class="form-control ">
+            </div>
+            <div class="col-md-4 form-group">
+              <label for="organization">Job Details</label>
+              <input type="text" name="organization" id="organization" class="form-control ">
+            </div>
+            <div class="col-md-4 form-group">
+              <label for="salary">Monthly Income</label>
+              <input type="number" name="salary" id="salary" class="form-control ">
+            </div>
+          </div>
+          <div class="row" style="margin-bottom: 30px">
+            <div class="col-md-6 form-group">
+              <label for="email">Email</label>
+              <input typre="email" name="email" id="email" class="form-control ">
+            </div>
+            <div class="col-md-6 form-group">
+              <label for="message">City</label>
+              <input type="text" name="city" id="city" class="form-control ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="name">Siblings</label>
+            </div>
+          </div>
+          <div class="sib_container" id="sib_container" style="margin-bottom: 30px">
+            <div class="row justify-content-md-center">
+              <div class="col-md-5 form-group">
+                <label for="sib_name">Name</label>
+                <input type="text" name="sib_name" id="sib_name" class="form-control ">
+              </div>
+              <div class="col-md-5 form-group">
+                <label for="sib_age">Age</label>
+                <input type="number" name="sib_age" id="sib_age" class="form-control ">
+              </div>
+              <div class="col-md-2 form-group">
+                <label for="add_btn">"</label>
+                <button class="add_form_field form-control">Add&nbsp;
+                  </button>
+              </div>
+
+            </div>
+            <script type="text/javascript">
+              $(document).ready(function () {
+                var max_fields = 10;
+                var wrapper = $(".sib_container");
+                var add_button = $(".add_form_field");
+                $(add_button).click(function (e) {
+                  e.preventDefault();
+                  $(wrapper).append('<div class="row"><div class="col-md-5 form-group"><input type="text" name="sib_name" id="sib_name" class="form-control "></div><div class="col-md-5 form-group"><input type="number" name="sib_age" id="sib_age" class="form-control "></div><div class="col-md-2 form-group"><a href="#" class="delete">Remove</a></div></div>'); //add input box
+                });
+
+                $(wrapper).on("click", ".delete", function (e) {
+                  e.preventDefault();
+                  $(this).parent('div').remove();
+                  x--;
+                })
+              });
+            </script>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="address">Commnication Address</label>
+              <textarea name="address" name="address" id="address" class="form-control " cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-12 form-group">
+              <label for="message">Write Message</label>
+              <textarea name="message" name="message" id="message" class="form-control " cols="30" rows="5"></textarea>
+            </div>
+          </div>
+          <div class="row">
+              <div class="col-md-12 form-group">
+                <label for="message">Any Expectation?</label>
+                <textarea name="message" name="message" id="message" class="form-control " cols="30" rows="3"></textarea>
+              </div>
+            </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <label for="message">File</label>
+              <input type="file" name="filteToUpload" id="citfilteToUploady" class="form-control ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6 form-group">
+              <input type="submit" value="Register" class="btn btn-primary">
+            </div>
+          </div>
+        </form>
       </div>
-    </section>
+    </div>
+  </div>
+</section>
 {% endblock %}

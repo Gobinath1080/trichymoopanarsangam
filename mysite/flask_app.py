@@ -2,6 +2,7 @@
 from flask import Flask
 from flask import render_template
 from flask import request
+import db
 
 app = Flask(__name__)
 
@@ -11,7 +12,7 @@ def index():
 
 
 @app.route('/registration/',methods=['GET','POST'])
-def registration():
+def registration(): 
     if request.method == 'POST':
         return request.form.get('email')
     return render_template('registration.html')
